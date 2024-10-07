@@ -16,3 +16,7 @@ print(df)
 print(df.info()) # Выводит информацию об файле
 
 print(df.describe()) # Выводит статистические данные
+
+df = pd.read_csv('dz.csv')
+average_salary_city = df.groupby('City')['Salary'].mean() # Вычисление средней зарплаты
+print(average_salary_city) # Вывод средней зарплаты по городу
